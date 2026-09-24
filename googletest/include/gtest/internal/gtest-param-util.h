@@ -639,7 +639,7 @@ class ParameterizedTestSuiteInfo : public ParameterizedTestSuiteInfoBase {
   struct InstantiationInfo {
     InstantiationInfo(std::string name_in, GeneratorCreationFunc* generator_in,
                       ParamNameGeneratorFunc* name_func_in, const char* file_in,
-                      int line_in)
+                      int line_in) noexcept
         : name(std::move(name_in)),
           generator(generator_in),
           name_func(name_func_in),
